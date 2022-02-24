@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calc.MainPage">
+
+    <StackLayout BackgroundColor="White">
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Calculator" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+
+        <Frame CornerRadius="0" HorizontalOptions="Fill" HeightRequest="40" BorderColor="#808080" Margin="10">
+            <Label x:Name="Result" Text="0" HorizontalTextAlignment="End" VerticalTextAlignment="Center" FontSize="30" TextColor="#9c9c9c"/>
+        </Frame>
+        <Label x:Name="QuickRsult" Text="0" HorizontalTextAlignment="End" VerticalTextAlignment="End" FontSize="10" TextColor="#9c9c9c" Margin="0,0,20,0"/>
+
+        <Grid Margin="10" Padding="5">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnAdd" Text="+" Style="{StaticResource buttonOprationStyle}" Clicked="btn_Clicked" Grid.Column="0" Grid.Row="0" HeightRequest="{Binding Width, Source={x:Reference btnAdd}}"/>
+            <Button x:Name="btnSub" Text="-" Style="{StaticResource buttonOprationStyle}" Clicked="btn_Clicked" Grid.Column="1" Grid.Row="0" HeightRequest="{Binding Width, Source={x:Reference btnSub}}"/>
+            <Button x:Name="btnMul" Text="*" Style="{StaticResource buttonOprationStyle}" Clicked="btn_Clicked" Grid.Column="2" Grid.Row="0" HeightRequest="{Binding Width, Source={x:Reference btnMul}}"/>
+            <Button x:Name="btnDiv" Text="/" Style="{StaticResource buttonOprationStyle}" Clicked="btn_Clicked" Grid.Column="3" Grid.Row="0" HeightRequest="{Binding Width, Source={x:Reference btnDiv}}"/>
+
+            <Button x:Name="btn7" Text="7" Style="{StaticResource buttonNumericStyle}" Clicked="btn_Clicked" Grid.Column="0" Grid.Row="1" HeightRequest="{Binding Width, Source={x:Reference btn7}}"/>
+            <Button x:Name="btn8" Text="8" Style="{StaticResource buttonNumericStyle}" Clicked="btn_Clicked" Grid.Column="1" Grid.Row="1" HeightRequest="{Binding Width, Source={x:Reference btn8}}"/>
+            <Button x:Name="btn9" Text="9" Style="{StaticResource buttonNumericStyle}" Clicked="btn_Clicked" Grid.Column="2" Grid.Row="1" HeightRequest="{Binding Width, Source={x:Reference btn9}}"/>
+            <Button x:Name="btnDel" Text="C" Style="{StaticResource buttonOprationStyle}" Clicked="btn_Clicked" Grid.Column="3" Grid.Row="1" HeightRequest="{Binding Width, Source={x:Reference btnDiv}}"/>
+
+            <Button x:Name="btn4" Text="4" Style="{StaticResource buttonNumericStyle}" Clicked="btn_Clicked" Grid.Column="0" Grid.Row="2" HeightRequest="{Binding Width, Source={x:Reference btn4}}"/>
+            <Button x:Name="btn5" Text="5" Style="{StaticResource buttonNumericStyle}" Clicked="btn_Clicked" Grid.Column="1" Grid.Row="2" HeightRequest="{Binding Width, Source={x:Reference btn5}}"/>
+            <Button x:Name="btn6" Text="6" Style="{StaticResource buttonNumericStyle}" Clicked="btn_Clicked" Grid.Column="2" Grid.Row="2" HeightRequest="{Binding Width, Source={x:Reference btn6}}"/>
+            <Button x:Name="btnBackSpace" Text="&lt;-" Style="{StaticResource buttonOprationStyle}" Clicked="btn_Clicked" Grid.Column="3" Grid.Row="2" HeightRequest="{Binding Width, Source={x:Reference btnBackSpace}}"/>
+
+            <Button x:Name="btnEq" Text="=" Style="{StaticResource buttonEqStyle}" Clicked="btn_Clicked" VerticalOptions="Fill" Grid.Column="3" Grid.Row="3" Grid.RowSpan="2" HeightRequest="{Binding Width, Source={x:Reference btnEq}}"/>
+
+            <!--<Button x:Name="btnMul" Text="*" Style="{StaticResource buttonNumericStyle}" Grid.Column="3" Grid.Row="2" HeightRequest="{Binding Width, Source={x:Reference btnMul}}"/>-->
+
+            <Button x:Name="btn1" Text="1" Style="{StaticResource buttonNumericStyle}" Clicked="btn_Clicked" Grid.Column="0" Grid.Row="3" HeightRequest="{Binding Width, Source={x:Reference btn1}}"/>
+            <Button x:Name="btn2" Text="2" Style="{StaticResource buttonNumericStyle}" Clicked="btn_Clicked" Grid.Column="1" Grid.Row="3" HeightRequest="{Binding Width, Source={x:Reference btn2}}"/>
+            <Button x:Name="btn3" Text="3" Style="{StaticResource buttonNumericStyle}" Clicked="btn_Clicked" Grid.Column="2" Grid.Row="3" HeightRequest="{Binding Width, Source={x:Reference btn3}}"/>
+            <!--<Button x:Name="btnEq" Text="=" Style="{StaticResource buttonNumericStyle}" Grid.Column="3" Grid.Row="3" HeightRequest="{Binding Width, Source={x:Reference btnEq}}"/>-->
+
+            <Button x:Name="btn0" Text="0" Style="{StaticResource buttonNumericStyle}" Clicked="btn_Clicked" Grid.Column="0" Grid.Row="4" HeightRequest="{Binding Width, Source={x:Reference btn0}}"/>
+            <Button x:Name="btn00" Text="00" Style="{StaticResource buttonNumericStyle}" Clicked="btn_Clicked" Grid.Column="1" Grid.Row="4" HeightRequest="{Binding Width, Source={x:Reference btn00}}"/>
+            <Button x:Name="btnDot" Text="." Style="{StaticResource buttonNumericStyle}" Clicked="btn_Clicked" Grid.Column="2" Grid.Row="4" HeightRequest="{Binding Width, Source={x:Reference btnDot}}"/>
+            
+            
+            
+            <!--<BoxView Grid.Row="0" Grid.Column="1" BackgroundColor="RED"/>
+            <BoxView Grid.Row="0" Grid.Column="2" BackgroundColor="RED"/>
+            <BoxView Grid.Row="0" Grid.Column="3" BackgroundColor="RED"/>-->
+            
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
